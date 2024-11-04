@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet } from 'react-native';
-/* @tutinfo Import <CODE>Link</CODE> component from <CODE>expo-router</CODE>. */ import { Link } from 'expo-router'; 
+import { Link } from 'expo-router';
 
 export default function Index() {
   return (
@@ -13,7 +13,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#2A2D34',
     alignItems: 'center',
     justifyContent: 'center',
   },
