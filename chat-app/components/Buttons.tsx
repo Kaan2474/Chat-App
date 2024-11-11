@@ -11,7 +11,8 @@ export default function Button({ label, theme }: Props) {
     return (
       <View
       style={[
-        styles.buttonContainer, {top: 0, alignSelf: "flex-end"} 
+        styles.buttonContainer,
+        {top: 10} 
       ]}
       >
       <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
@@ -35,7 +36,6 @@ const styles = StyleSheet.create({
     width: 170,
     height: 35,
     top: 50,
-    alignSelf: "center",
   },
   button: {
     borderRadius: 50,
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: "row",
     backgroundColor: "#30C5FF"
   },
   buttonIcon: {

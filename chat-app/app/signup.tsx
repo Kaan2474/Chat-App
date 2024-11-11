@@ -1,4 +1,4 @@
-import { Text, TextInput, StyleSheet } from 'react-native';
+import { Text, TextInput, StyleSheet, ScrollView } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import React from 'react';
 import Button from '@/components/Buttons';
@@ -12,7 +12,7 @@ export default function Index() {
     <SafeAreaProvider style={styles.container}>
       <SafeAreaView style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
-        <Button label="Foto hinzufügen" theme='image' />
+        <Button label='Foto hinzufügen' theme='image'></Button>
       </SafeAreaView>
       
       <SafeAreaView style={styles.textfieldContainer}>
@@ -22,7 +22,7 @@ export default function Index() {
         <TextField inputLabel='Email'/>
         <TextField inputLabel='Nutzername'/>
         <TextField inputLabel='Passwort'/>
-        <TextField inputLabel='Passwort bestätigen'/>
+        
         <Button label='Registrieren'/>
       </SafeAreaView>
     </SafeAreaProvider>
@@ -39,11 +39,10 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     flexDirection: "column",
-    alignItems: "flex-start",
-    // backgroundColor: "red"
+    alignItems: "center",
   },
   textfieldContainer: {
     flex: 2,
-    // backgroundColor: "green"
+    alignItems: "center",
   },
 });

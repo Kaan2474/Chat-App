@@ -5,7 +5,6 @@ import {StyleSheet, TextInput, Text } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 const AddFriends = () => {
-  const [text, onChangeText] = React.useState('Useless Text');
   return (
     <SafeAreaProvider style={styles.container}>
       <SafeAreaView style={styles.descriptionArea}>
@@ -42,6 +41,7 @@ const styles = StyleSheet.create({
   },
   addfriendArea: {
     flex: 2,
+    alignItems: "center"
   },
 });
 
