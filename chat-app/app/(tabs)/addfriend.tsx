@@ -1,4 +1,5 @@
 import Button from '@/components/Buttons';
+import TextField from '@/components/TextField';
 import React from 'react';
 import {StyleSheet, TextInput, Text } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
@@ -12,20 +13,12 @@ const AddFriends = () => {
           Geben Sie den Benutzernamen ein, um noch einfacher in Verbindung zu 
           bleiben.
         </Text>
-        </SafeAreaView>
+      </SafeAreaView>
 
-        <SafeAreaView style={styles.addfriendArea}>
-          <SafeAreaView style={{alignItems: "flex-start"}}>
-          <Text style={styles.usernameText}>Nutzername</Text>
-          <TextInput
-          style={styles.input}
-          onChangeText={onChangeText}
-          value={text}
-          />
-          <Button label='Freund hinzufügen' />
-          </SafeAreaView>
-        </SafeAreaView>
-
+      <SafeAreaView style={styles.addfriendArea}>
+        <TextField inputLabel="Nutzername"/>
+        <Button label='Freund hinzufügen' />
+      </SafeAreaView>
     </SafeAreaProvider>
   )
 }
@@ -42,25 +35,14 @@ const styles = StyleSheet.create({
   descriptionArea: {
     flex: 1,
   },
-  addfriendArea: {
-    flex: 2,
-  },
-  input: {
-    height: 35,
-    width: 335,
-    backgroundColor: "#D9D9D9",
-    color: "#000000",
-    borderWidth: 1,
-    padding: 10,
-  },
   descriptionText: {
     color: "#FFFFFF",
     textAlign: "center",
     fontSize: 16
   },
-  usernameText: {
-    color: "#FFFFFF",
-  }
+  addfriendArea: {
+    flex: 2,
+  },
 });
 
 export default AddFriends
