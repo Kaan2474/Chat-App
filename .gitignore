@@ -1,5 +1,17 @@
-# Expo data folder
+# Expo Ordner im Oberordner Chat-App
 .expo/
 
-# macOS Finder metadata
+# DS Store Datei im Oberordner Chat-App
 .DS_Store
+
+# Node modules Ordner im Unterordner chat-app
+chat-app/node_modules/
+
+# Expo Ordner im Unterordner chat-app
+chat-app/.expo/
+
+# DS Store Datei im Unterordner chat-app
+chat-app/.DS_Store
+
+# expo-env.d.ts Datei im Unterordner chat-app
+chat-app/expo-env.d.ts
