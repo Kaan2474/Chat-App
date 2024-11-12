@@ -22,6 +22,7 @@ export default function Button({ label, theme }: Props) {
     </View>
     )
   }
+  
   return (
     <View style={styles.buttonContainer}>
       <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: 170,
     height: 35,
-    top: 50,
+    top: 20,
   },
   button: {
     borderRadius: 50,

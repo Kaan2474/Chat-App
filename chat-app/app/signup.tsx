@@ -5,7 +5,7 @@ import Button from '@/components/Buttons';
 import ImageViewer from '@/components/ImageViewer';
 import TextField from '@/components/TextField';
 
-const PlaceholderImage = require('@/assets/images/DSC_7208.jpg');
+const PlaceholderImage = require('@/assets/images/default_user.jpg');
 
 export default function Index() {
   return (
@@ -22,8 +22,8 @@ export default function Index() {
         <TextField inputLabel='Email'/>
         <TextField inputLabel='Nutzername'/>
         <TextField inputLabel='Passwort'/>
-        
-        <Button label='Registrieren'/>
+        <TextField inputLabel='Passwort bestätigen'/>
+        <Button label='Registrieren'></Button>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -37,12 +37,13 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   imageContainer: {
-    flex: 1,
+    flex: 1 / 2,
     flexDirection: "column",
     alignItems: "center",
   },
   textfieldContainer: {
     flex: 2,
     alignItems: "center",
+    justifyContent: "center",
   },
 });

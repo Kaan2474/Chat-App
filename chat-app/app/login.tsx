@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
       },
       passwordText: {
-        top: 55, 
+        top: 25, 
         textAlign: "center",
         color: "#FFFFFF"
       }
