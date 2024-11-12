@@ -10,7 +10,7 @@ type Props = {
 export default function TextField({ inputLabel }: Props) {
     const [text, onChangeText] = React.useState('Useless Text');
     return (
-        <SafeAreaView style={styles.textfieldContainer}>
+        <SafeAreaView>
           <Text style={styles.labelText}>{inputLabel}</Text>
           <TextInput
           style={styles.input}
@@ -22,18 +22,17 @@ export default function TextField({ inputLabel }: Props) {
 }
 
 const styles = StyleSheet.create({
-    textfieldContainer: {
-        flex: 1/10
-    },
-    labelText: {
-        color: "#FFFFFF",
-      },
-      input: {
-        height: 40,
-        width: 335,
-        backgroundColor: "#D9D9D9",
-        color: "#000000",
-        borderWidth: 1,
-        padding: 10,
-      },
+  labelText: {
+    marginBottom: 1,
+    color: "#FFFFFF",
+  },
+  input: {
+    height: 40,
+    width: 335,
+    backgroundColor: "#D9D9D9",
+    color: "#000000",
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: -15
+  },
 });

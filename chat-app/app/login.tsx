@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import React from 'react'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import TextField from '@/components/TextField';
@@ -17,9 +17,9 @@ const Login = () => {
       <SafeAreaView style={styles.loginArea}>
         <TextField inputLabel="Nutzername"/>
         <TextField inputLabel='Passwort'></TextField>
-        <Button label='Anmelden' />
-        <Text style={styles.passwordText}>Passwort vergessen?</Text>
+        <Button label='Anmelden'></Button>
       </SafeAreaView>
+      
     </SafeAreaProvider>
   )
 }
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
       },
       descriptionArea: {
         flex: 1,
+        justifyContent: "center"
       },
       descriptionText: {
         color: "#FFFFFF",
@@ -43,10 +44,10 @@ const styles = StyleSheet.create({
       },
       loginArea: {
         flex: 2,
-        alignItems: "center"
+        alignItems: "center",
       },
       passwordText: {
-        top: 25, 
+        top: 30, 
         textAlign: "center",
         color: "#FFFFFF"
       }

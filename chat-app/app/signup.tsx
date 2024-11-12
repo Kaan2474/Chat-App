@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   imageContainer: {
-    flex: 1 / 2,
+    flex: 1/2,
     flexDirection: "column",
     alignItems: "center",
   },
   textfieldContainer: {
     flex: 2,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-around",
   },
 });

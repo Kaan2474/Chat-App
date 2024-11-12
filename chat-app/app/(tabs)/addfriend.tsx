@@ -1,7 +1,7 @@
 import Button from '@/components/Buttons';
 import TextField from '@/components/TextField';
 import React from 'react';
-import {StyleSheet, TextInput, Text } from 'react-native';
+import {StyleSheet, Text } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 const AddFriends = () => {
@@ -16,7 +16,9 @@ const AddFriends = () => {
 
       <SafeAreaView style={styles.addfriendArea}>
         <TextField inputLabel="Nutzername"/>
-        <Button label='Freund hinzufügen' />
+      </SafeAreaView>
+      <SafeAreaView style={{alignItems: "center", bottom: 300}}>
+        <Button label='Freund hinzufügen'/>
       </SafeAreaView>
     </SafeAreaProvider>
   )
@@ -33,6 +35,7 @@ const styles = StyleSheet.create({
   },
   descriptionArea: {
     flex: 1,
+    justifyContent: "center",
   },
   descriptionText: {
     color: "#FFFFFF",
@@ -41,7 +44,8 @@ const styles = StyleSheet.create({
   },
   addfriendArea: {
     flex: 2,
-    alignItems: "center"
+    alignItems: "center",
+    top: 75,
   },
 });
 
