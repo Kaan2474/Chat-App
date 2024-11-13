@@ -4,18 +4,16 @@ import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import TextField from '@/components/TextField';
 import Button from '@/components/Buttons';
 import ImageViewer from '@/components/ImageViewer';
+import DescriptionText from '@/components/DescriptionText';
 
 const Login = () => {
   const logo = require('@/assets/images/logo_4.png');
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>
-      <SafeAreaView style={styles.descriptionArea}>
-        <Text style={styles.descriptionText}>Willkommen zurück! Loggen Sie sich
-         ein, um sofort mit dem Chatten zu starten und wieder mit Ihren Freunden 
-         in Verbindung zu treten.
-        </Text>
-      </SafeAreaView>
+      <DescriptionText text='Willkommen zurück! Loggen Sie sich ein, um
+       sofort mit dem Chatten zu starten und wieder mit Ihren Freunden
+      in Verbindung zu treten.'/>
 
       <SafeAreaView style={styles.loginArea}>
         <TextField inputLabel="Nutzername"/>
@@ -38,19 +36,6 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         backgroundColor: "#2A2D34",
         padding: 20,
-      },
-      descriptionArea: {
-        flex: 1/4,
-        justifyContent: "center",
-        borderTopWidth: 2,
-        borderTopColor: "#FFFFFF",
-        borderBottomWidth: 2,
-        borderBottomColor: "#FFFFFF"
-      },
-      descriptionText: {
-        color: "#FFFFFF",
-        textAlign: "center",
-        fontSize: 16
       },
       loginArea: {
         flex: 1/2,
