@@ -5,6 +5,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import ImageViewer from '@/components/ImageViewer';
 import Button from '@/components/Buttons';
 import DescriptionText from '@/components/DescriptionText';
+import ProfileInformation from '@/components/ProfileInformation';
 
 const Profile = () => {
   const logo = require('@/assets/images/logo_4.png');
@@ -18,16 +19,14 @@ const Profile = () => {
 
       <SafeAreaView style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
-        <Text style={{color: "#FFFFFF", top: 10, fontSize: 16}}>Kaan2474</Text>
+        <Text style={{color: "#FFFFFF",  fontSize: 16}}>Kaan2474</Text>
       </SafeAreaView>
 
-      <SafeAreaView style={styles.userInformationArea}>
-        <Text style={{textAlign:"left"}}>Vorname</Text>
-        <Text style={{textAlign:"right", alignSelf:"flex-end"}}>Nachname</Text>
-        </SafeAreaView>
-        <Text>Geburtstag</Text>
-        <Text>Alter</Text>
-        <Text>Email</Text>
+      <ProfileInformation leftLabel='Vorname' leftAnswer="Kaan" rightLabel='Nachname' rightAnswer='Hisiroglu' bothLabels={true}/>
+      <ProfileInformation leftLabel='Geburtsdatum' leftAnswer="21.09.1998" rightLabel='Alter' rightAnswer='26 Jahre' bothLabels={true}/>
+      <ProfileInformation leftLabel='Email' leftAnswer='k.hsrglu@gmx.de' rightLabel='Freunde' rightAnswer='7' bothLabels={true}/>
+      <ProfileInformation leftLabel='Mitglied seit' leftAnswer='12.09.2025' bothLabels={false}/>
+      <ProfileInformation leftLabel='Zitat' leftAnswer="Niemals aufgeben!" bothLabels={false}/>
     </SafeAreaProvider>
   );
 }
@@ -44,11 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "green",
   },
-  userInformationArea: {
-    backgroundColor: "orange",
-  }
 });
 
 export default Profile
