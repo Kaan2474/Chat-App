@@ -39,7 +39,7 @@ export default function ProfileInformation({ leftLabel, leftAnswer, rightLabel, 
 
 const styles = StyleSheet.create({
     userInformationArea: {
-        flex: 1/11,
+        flex: 1/9,
         flexDirection: "column",
         borderBottomWidth: 2,
         borderColor: "#FFF",
@@ -54,12 +54,14 @@ const styles = StyleSheet.create({
     },
     labelText: {
         color: "#D9D9D9",
-        textAlign: "left"
+        textAlign: "left",
+        fontSize: 16
     },
     answerText: {
         color: "#FFFFFF",
         top: 10,
-        textAlign: "left"
+        textAlign: "left",
+        fontSize: 16
     },
 });
 

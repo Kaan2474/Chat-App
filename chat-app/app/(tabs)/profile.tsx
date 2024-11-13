@@ -19,7 +19,7 @@ const Profile = () => {
 
       <SafeAreaView style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
-        <Text style={{color: "#FFFFFF",  fontSize: 16}}>Kaan2474</Text>
+        <Text style={styles.userName}>Kaan2474</Text>
       </SafeAreaView>
 
       <ProfileInformation leftLabel='Vorname' leftAnswer="Kaan" rightLabel='Nachname' rightAnswer='Hisiroglu' bothLabels={true}/>
@@ -44,6 +44,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  userName: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    top: 10
+  }
 });
 
 export default Profile
