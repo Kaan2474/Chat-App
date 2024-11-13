@@ -18,6 +18,7 @@ const Login = () => {
         <TextField inputLabel="Nutzername"/>
         <TextField inputLabel='Passwort'></TextField>
         <Button label='Anmelden'></Button>
+        <Text style={styles.passwordText}>Passwort vergessen?</Text>
       </SafeAreaView>
       
     </SafeAreaProvider>

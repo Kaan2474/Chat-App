@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: 170,
     height: 35,
-    top: 20,
   },
   button: {
     borderRadius: 50,
