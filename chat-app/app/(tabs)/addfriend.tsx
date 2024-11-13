@@ -38,8 +38,11 @@ const styles = StyleSheet.create({
   },
   descriptionArea: {
     flex: 1/4,
-    alignItems: "center",
     justifyContent: "center",
+    borderTopWidth: 2,
+    borderTopColor: "#FFFFFF",
+    borderBottomWidth: 2,
+    borderBottomColor: "#FFFFFF"
   },
   descriptionText: {
     color: "#FFFFFF",

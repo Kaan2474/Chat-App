@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         borderTopWidth: 2,
         borderTopColor: "#FFFFFF",
+        borderBottomWidth: 2,
+        borderBottomColor: "#FFFFFF"
       },
       descriptionText: {
         color: "#FFFFFF",
