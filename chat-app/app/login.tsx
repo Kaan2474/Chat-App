@@ -3,10 +3,13 @@ import React from 'react'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import TextField from '@/components/TextField';
 import Button from '@/components/Buttons';
+import ImageViewer from '@/components/ImageViewer';
 
 const Login = () => {
+  const logo = require('@/assets/images/logo_4.png');
   return (
     <SafeAreaProvider style={styles.container}>
+      <ImageViewer imgSource={logo} theme='logo'/>
       <SafeAreaView style={styles.descriptionArea}>
         <Text style={styles.descriptionText}>Willkommen zurück! Loggen Sie sich
          ein, um sofort mit dem Chatten zu starten und wieder mit Ihren Freunden 
@@ -17,8 +20,10 @@ const Login = () => {
       <SafeAreaView style={styles.loginArea}>
         <TextField inputLabel="Nutzername"/>
         <TextField inputLabel='Passwort'></TextField>
-        <Button label='Anmelden'></Button>
-        <Text style={styles.passwordText}>Passwort vergessen?</Text>
+        <SafeAreaView style={styles.buttonArea}>
+          <Button label='Anmelden'></Button>
+          <Text style={styles.passwordText}>Passwort vergessen?</Text>
+        </SafeAreaView>
       </SafeAreaView>
       
     </SafeAreaProvider>
@@ -35,8 +40,10 @@ const styles = StyleSheet.create({
         padding: 20,
       },
       descriptionArea: {
-        flex: 1,
-        justifyContent: "center"
+        flex: 1/4,
+        justifyContent: "center",
+        borderTopWidth: 2,
+        borderTopColor: "#FFFFFF",
       },
       descriptionText: {
         color: "#FFFFFF",
@@ -44,12 +51,17 @@ const styles = StyleSheet.create({
         fontSize: 16
       },
       loginArea: {
-        flex: 2,
+        flex: 1/2,
         alignItems: "center",
+        justifyContent: "center",
+      },
+      buttonArea: {
+        flex: 1/4,
+        top: 20
       },
       passwordText: {
-        top: 30, 
         textAlign: "center",
-        color: "#FFFFFF"
+        color: "#FFFFFF",
+        top: 7.5
       }
   });
