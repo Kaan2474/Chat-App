@@ -24,8 +24,8 @@ const Profile = () => {
 
       <ProfileInformation leftLabel='Vorname' leftAnswer="Kaan" rightLabel='Nachname' rightAnswer='Hisiroglu' bothLabels={true}/>
       <ProfileInformation leftLabel='Geburtsdatum' leftAnswer="21.09.1998" rightLabel='Alter' rightAnswer='26 Jahre' bothLabels={true}/>
-      <ProfileInformation leftLabel='Email' leftAnswer='k.hsrglu@gmx.de' rightLabel='Freunde' rightAnswer='7' bothLabels={true}/>
-      <ProfileInformation leftLabel='Mitglied seit' leftAnswer='12.09.2025' bothLabels={false}/>
+      <ProfileInformation leftLabel='Mitglied seit' leftAnswer='12.09.2025' rightLabel='Freunde' rightAnswer='7' bothLabels={true}/>
+      <ProfileInformation leftLabel='Email' leftAnswer='k.hsrglu@gmx.de' bothLabels={false}/>
       <ProfileInformation leftLabel='Zitat' leftAnswer="Niemals aufgeben!" bothLabels={false}/>
     </SafeAreaProvider>
   );

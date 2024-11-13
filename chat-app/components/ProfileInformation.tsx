@@ -15,13 +15,13 @@ export default function ProfileInformation({ leftLabel, leftAnswer, rightLabel, 
     if (bothLabels === true) {
         return (
             <SafeAreaView style={styles.userInformationArea}>
-                <SafeAreaView style={styles.leftLabelArea}>
-                    <Text style={styles.y}>{leftLabel}</Text>
-                    <Text style={styles.x}>{leftAnswer}</Text>
+                <SafeAreaView style={styles.leftArea}>
+                    <Text style={styles.labelText}>{leftLabel}</Text>
+                    <Text style={styles.answerText}>{leftAnswer}</Text>
                 </SafeAreaView>
-                <SafeAreaView style={styles.rightLabelArea}>
-                    <Text style={styles.y}>{rightLabel}</Text>
-                    <Text style={styles.x}>{rightAnswer}</Text>
+                <SafeAreaView style={styles.rightArea}>
+                    <Text style={styles.labelText}>{rightLabel}</Text>
+                    <Text style={styles.answerText}>{rightAnswer}</Text>
                 </SafeAreaView>
             </SafeAreaView>
           );
@@ -29,9 +29,9 @@ export default function ProfileInformation({ leftLabel, leftAnswer, rightLabel, 
 
     return (
         <SafeAreaView style={styles.userInformationArea}>
-            <SafeAreaView style={styles.leftLabelArea}>
-                <Text style={styles.y}>{leftLabel}</Text>
-                <Text style={styles.x}>{leftAnswer}</Text>
+            <SafeAreaView style={styles.leftArea}>
+                <Text style={styles.labelText}>{leftLabel}</Text>
+                <Text style={styles.answerText}>{leftAnswer}</Text>
             </SafeAreaView>
         </SafeAreaView>
       );
@@ -43,22 +43,24 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         borderBottomWidth: 2,
         borderColor: "#FFF",
-        marginBottom: 5
+        marginBottom: 5,
     },
-    leftLabelArea: {
+    leftArea: {
         alignSelf: "flex-start",
     },
-    rightLabelArea: {
+    rightArea: {
         alignSelf: "flex-end",
         bottom: 35,
     },
-    x: {
-        color: "#FFFFFF",
-        top: 10
+    labelText: {
+        color: "#D9D9D9",
+        textAlign: "left"
     },
-    y: {
-        color: "#D9D9D9"
-    }
+    answerText: {
+        color: "#FFFFFF",
+        top: 10,
+        textAlign: "left"
+    },
 });
 
 
