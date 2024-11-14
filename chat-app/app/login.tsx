@@ -13,7 +13,7 @@ const Login = () => {
       <ImageViewer imgSource={logo} theme='logo'/>
       <DescriptionText text='Willkommen zurück! Loggen Sie sich ein, um
        sofort mit dem Chatten zu starten und wieder mit Ihren Freunden
-      in Verbindung zu treten.'/>
+      in Verbindung zu treten.' headingNecessary={false}/>
 
       <SafeAreaView style={styles.loginArea}>
         <TextField inputLabel="Nutzername"/>

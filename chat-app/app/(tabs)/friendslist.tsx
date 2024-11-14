@@ -8,6 +8,7 @@ const Friendslist = () => {
       <Link href={"/signup"} style={styles.text}>Gehe zu Registrierung</Link>
       <Link href={"/login"} style={styles.text}>Gehe zu Login</Link>
       <Link href={"/signupSuccess"} style={styles.text}>Gehe zu Signup Success</Link>
+      <Link href={"/twoFactorAuth"} style={styles.text}>Gehe zu 2 Faktor Authentifizierung</Link>
     </View>
   )
 }
