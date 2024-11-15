@@ -3,7 +3,7 @@ import DescriptionText from '@/components/DescriptionText';
 import ImageViewer from '@/components/ImageViewer';
 import TextField from '@/components/TextField';
 import React from 'react';
-import {StyleSheet, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 
