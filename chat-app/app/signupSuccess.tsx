@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import Button from '@/components/Buttons';
 import ImageViewer from '@/components/ImageViewer';
 import React from 'react'
 
+
+const logo = require('@/assets/images/logo_4.png');
+
+
 const LoginSuccess = () => {
-  const logo = require('@/assets/images/logo_4.png');
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>

@@ -5,8 +5,11 @@ import DescriptionText from '@/components/DescriptionText'
 import ImageViewer from '@/components/ImageViewer'
 import Button from '@/components/Buttons'
 
-const TwoFactorAuth = () => {
-  const logo = require('@/assets/images/logo_4.png');    
+
+const logo = require('@/assets/images/logo_4.png');
+
+
+const TwoFactorAuth = () => {  
   return (
     <SafeAreaProvider style={styles.container}>
         <ImageViewer imgSource={logo} theme='logo'/>

@@ -7,14 +7,16 @@ import {StyleSheet, Text } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 
+const logo = require('@/assets/images/logo_4.png');
+
+
 const AddFriends = () => {
-  const logo = require('@/assets/images/logo_4.png');
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>
       <DescriptionText text='Finden Sie Ihre Freunde und fügen Sie sie zu
        Ihrer Chatliste hinzu! Geben Sie den Benutzernamen ein, um noch
-        einfacher in Verbindung zu bleiben.' />
+        einfacher in Verbindung zu bleiben.' headingNecessary={false}/>
 
       <SafeAreaView style={styles.addfriendArea}>
         <TextField inputLabel="Nutzername"/>

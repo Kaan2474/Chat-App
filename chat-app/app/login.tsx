@@ -6,8 +6,11 @@ import Button from '@/components/Buttons';
 import ImageViewer from '@/components/ImageViewer';
 import DescriptionText from '@/components/DescriptionText';
 
+
+const logo = require('@/assets/images/logo_4.png');
+
+
 const Login = () => {
-  const logo = require('@/assets/images/logo_4.png');
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>

@@ -7,15 +7,17 @@ import Button from '@/components/Buttons';
 import DescriptionText from '@/components/DescriptionText';
 import ProfileInformation from '@/components/ProfileInformation';
 
-const Profile = () => {
-  const logo = require('@/assets/images/logo_4.png');
-  const PlaceholderImage = require('@/assets/images/default_user.jpg');
 
+const logo = require('@/assets/images/logo_4.png');
+const PlaceholderImage = require('@/assets/images/default_user.jpg');
+
+
+const Profile = () => {
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>
       <DescriptionText text='Das ist Ihr Profil! Hier können Sie Ihre
-       Informationen ansehen und Ihr Profilbild ändern!'/>
+       Informationen ansehen und Ihr Profilbild ändern!' headingNecessary={false}/>
 
       <SafeAreaView style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
