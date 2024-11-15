@@ -24,6 +24,7 @@ export default function Index() {
         <TextField inputLabel='Passwort'/>
         <TextField inputLabel='Passwort bestätigen'/>
         <Button label='Registrieren'></Button>
+        <Text style={styles.loginText}>Du hast bereits ein Konto? Anmelden</Text>
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -46,4 +47,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-around",
   },
+  loginText: {
+    color: "#FFF",
+    top: 15,
+  }
 });
