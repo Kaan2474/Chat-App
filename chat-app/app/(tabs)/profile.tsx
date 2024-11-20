@@ -18,8 +18,8 @@ const Profile = () => {
       <ImageViewer imgSource={logo} theme='logo'/>
 
       <SafeAreaView style={styles.descriptionArea}>
-      <DescriptionText text='Das ist Ihr Profil! Hier können Sie Ihre
-       Informationen ansehen und Ihr Profilbild ändern!' headingNecessary={false}/>
+        <DescriptionText text='Das ist Ihr Profil! Hier können Sie Ihre
+        Informationen ansehen und Ihr Profilbild ändern!' headingNecessary={false}/>
       </SafeAreaView>
 
       <SafeAreaView style={styles.imageContainer}>

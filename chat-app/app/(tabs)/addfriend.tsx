@@ -14,9 +14,11 @@ const AddFriends = () => {
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>
-      <DescriptionText text='Finden Sie Ihre Freunde und fügen Sie sie zu
-       Ihrer Chatliste hinzu! Geben Sie den Benutzernamen ein, um noch
+      <SafeAreaView style={styles.descriptionArea}>
+        <DescriptionText text='Finden Sie Ihre Freunde und fügen Sie sie zu
+        Ihrer Chatliste hinzu! Geben Sie den Benutzernamen ein, um noch
         einfacher in Verbindung zu bleiben.' headingNecessary={false}/>
+      </SafeAreaView>
 
       <SafeAreaView style={styles.addfriendArea}>
         <TextField inputLabel="Nutzername"/>
@@ -36,6 +38,14 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     backgroundColor: "#2A2D34",
     padding: 20,
+  },
+  descriptionArea: {
+    flex: 1/4,
+    justifyContent: "center",
+    borderTopWidth: 2,
+    borderTopColor: "#FFFFFF",
+    borderBottomWidth: 2,
+    borderBottomColor: "#FFFFFF"
   },
   addfriendArea: {
     flex: 1/3,
