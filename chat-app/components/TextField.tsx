@@ -8,16 +8,16 @@ type Props = {
 };
 
 export default function TextField({ inputLabel }: Props) {
-    const [text, onChangeText] = React.useState('Useless Text');
-    return (
-        <SafeAreaView>
-          <Text style={styles.labelText}>{inputLabel}</Text>
-          <TextInput
-          style={styles.input}
-          onChangeText={onChangeText}
-          value={text}
-          />
-        </SafeAreaView>
+  const [text, onChangeText] = React.useState('Useless Text');
+  return (
+    <SafeAreaView>
+      <Text style={styles.labelText}>{inputLabel}</Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+      />
+    </SafeAreaView>
       );
 }
 
@@ -31,8 +31,6 @@ const styles = StyleSheet.create({
     width: 335,
     backgroundColor: "#D9D9D9",
     color: "#000000",
-    borderWidth: 1,
     padding: 10,
-    marginBottom: -15
   },
 });

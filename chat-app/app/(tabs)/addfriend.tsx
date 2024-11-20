@@ -4,7 +4,7 @@ import ImageViewer from '@/components/ImageViewer';
 import TextField from '@/components/TextField';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 const logo = require('@/assets/images/logo_4.png');
@@ -22,10 +22,9 @@ const AddFriends = () => {
 
       <SafeAreaView style={styles.addfriendArea}>
         <TextField inputLabel="Nutzername"/>
-        <SafeAreaView style={styles.buttonArea}>
-          <Button label='Freund hinzufügen'/>
+          <Button label="Freund hinzufügen"/>
       </SafeAreaView>
-      </SafeAreaView>
+
     </SafeAreaProvider>
   )
 }
@@ -35,27 +34,22 @@ const AddFriends = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexWrap: "wrap",
     backgroundColor: "#2A2D34",
     padding: 20,
   },
   descriptionArea: {
-    flex: 1/4,
+    flex: 1/3,
     justifyContent: "center",
     borderTopWidth: 2,
     borderTopColor: "#FFFFFF",
     borderBottomWidth: 2,
-    borderBottomColor: "#FFFFFF"
+    borderBottomColor: "#FFFFFF",
   },
   addfriendArea: {
-    flex: 1/3,
+    flex: 1/2,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
-  buttonArea: {
-    flex: 1/4,
-    top: 75
-  }
 });
 
 export default AddFriends
