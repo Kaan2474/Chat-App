@@ -7,6 +7,7 @@ type Props = {
   inputLabel: string;
 };
 
+
 export default function TextField({ inputLabel }: Props) {
   const [text, onChangeText] = React.useState('Useless Text');
   return (
@@ -18,7 +19,7 @@ export default function TextField({ inputLabel }: Props) {
         value={text}
       />
     </SafeAreaView>
-      );
+  );
 }
 
 const styles = StyleSheet.create({

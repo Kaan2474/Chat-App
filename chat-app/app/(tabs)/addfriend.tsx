@@ -22,11 +22,11 @@ const AddFriends = () => {
 
       <SafeAreaView style={styles.addfriendArea}>
         <TextField inputLabel="Nutzername"/>
-          <Button label="Freund hinzufügen"/>
+        <Button label="Freund hinzufügen"/>
       </SafeAreaView>
 
     </SafeAreaProvider>
-  )
+  );
 }
 
 
