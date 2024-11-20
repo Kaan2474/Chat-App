@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, Text } from 'react-native';
+import { StyleSheet, TextInput, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 
@@ -11,20 +11,23 @@ type Props = {
 export default function TextField({ inputLabel }: Props) {
   const [text, onChangeText] = React.useState('Useless Text');
   return (
-    <SafeAreaView>
+    <View style={styles.inputContainer}>
       <Text style={styles.labelText}>{inputLabel}</Text>
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
       />
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  inputContainer: {
+    marginBottom: 10
+  },
   labelText: {
-    marginBottom: 1,
+    marginBottom: 1.5,
     color: "#FFFFFF",
   },
   input: {
