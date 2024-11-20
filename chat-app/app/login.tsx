@@ -14,9 +14,11 @@ const Login = () => {
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>
-      <DescriptionText text='Willkommen zurück! Loggen Sie sich ein, um
-       sofort mit dem Chatten zu starten und wieder mit Ihren Freunden
-      in Verbindung zu treten.' headingNecessary={false}/>
+      <SafeAreaView style={styles.descriptionArea}>
+        <DescriptionText text='Willkommen zurück! Loggen Sie sich ein, um
+        sofort mit dem Chatten zu starten und wieder mit Ihren Freunden
+        in Verbindung zu treten.' headingNecessary={false}/>
+      </SafeAreaView>
 
       <SafeAreaView style={styles.loginArea}>
         <TextField inputLabel="Nutzername"/>
@@ -39,6 +41,14 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         backgroundColor: "#2A2D34",
         padding: 20,
+      },
+      descriptionArea: {
+        flex: 1/4,
+        justifyContent: "center",
+        borderTopWidth: 2,
+        borderTopColor: "#FFFFFF",
+        borderBottomWidth: 2,
+        borderBottomColor: "#FFFFFF"
       },
       loginArea: {
         flex: 1/2,
