@@ -15,11 +15,11 @@ export default function ProfileInformation({ leftLabel, leftAnswer, rightLabel, 
     if (bothLabels === true) {
         return (
             <SafeAreaView style={styles.userInformationArea}>
-                <SafeAreaView style={styles.leftArea}>
+                <SafeAreaView>
                     <Text style={styles.labelText}>{leftLabel}</Text>
                     <Text style={styles.answerText}>{leftAnswer}</Text>
                 </SafeAreaView>
-                <SafeAreaView style={styles.rightArea}>
+                <SafeAreaView>
                     <Text style={styles.labelText}>{rightLabel}</Text>
                     <Text style={styles.answerText}>{rightAnswer}</Text>
                 </SafeAreaView>
@@ -29,7 +29,7 @@ export default function ProfileInformation({ leftLabel, leftAnswer, rightLabel, 
 
     return (
         <SafeAreaView style={styles.userInformationArea}>
-            <SafeAreaView style={styles.leftArea}>
+            <SafeAreaView>
                 <Text style={styles.labelText}>{leftLabel}</Text>
                 <Text style={styles.answerText}>{leftAnswer}</Text>
             </SafeAreaView>
@@ -39,29 +39,19 @@ export default function ProfileInformation({ leftLabel, leftAnswer, rightLabel, 
 
 const styles = StyleSheet.create({
     userInformationArea: {
-        flex: 1/9,
-        flexDirection: "column",
-        borderBottomWidth: 2,
+        flex: 1/10,
         borderColor: "#FFF",
-        marginBottom: 5,
-    },
-    leftArea: {
-        alignSelf: "flex-start",
-    },
-    rightArea: {
-        alignSelf: "flex-end",
-        bottom: 35,
+        flexDirection: "row",
+        justifyContent: "space-between",
     },
     labelText: {
         color: "#D9D9D9",
-        textAlign: "left",
         fontSize: 16
     },
     answerText: {
         color: "#FFFFFF",
-        top: 10,
-        textAlign: "left",
-        fontSize: 16
+        fontSize: 16,
+        top: 7.5,
     },
 });
 

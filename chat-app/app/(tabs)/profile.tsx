@@ -16,8 +16,11 @@ const Profile = () => {
   return (
     <SafeAreaProvider style={styles.container}>
       <ImageViewer imgSource={logo} theme='logo'/>
+
+      <SafeAreaView style={styles.descriptionArea}>
       <DescriptionText text='Das ist Ihr Profil! Hier können Sie Ihre
        Informationen ansehen und Ihr Profilbild ändern!' headingNecessary={false}/>
+      </SafeAreaView>
 
       <SafeAreaView style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
@@ -40,16 +43,23 @@ const styles = StyleSheet.create({
     backgroundColor: "#2A2D34",
     padding: 20,
   },
+  descriptionArea: {
+    flex: 1/6,
+    justifyContent: "center",
+    borderTopWidth: 2,
+    borderTopColor: "#FFFFFF",
+    borderBottomWidth: 2,
+    borderBottomColor: "#FFFFFF"
+  },
   imageContainer: {
-    flex: 1/4,
-    flexDirection: "column",
+    flex: 1/3,
     alignItems: "center",
     justifyContent: "center",
   },
   userName: {
     color: "#FFFFFF",
     fontSize: 16,
-    top: 10
+    top: 5
   }
 });
 
