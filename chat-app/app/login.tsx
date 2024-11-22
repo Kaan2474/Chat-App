@@ -23,46 +23,41 @@ const Login = () => {
       <SafeAreaView style={styles.loginArea}>
         <TextField inputLabel="Nutzername"/>
         <TextField inputLabel='Passwort'></TextField>
-        <SafeAreaView style={styles.buttonArea}>
-          <Button label='Anmelden'></Button>
-          <Text style={styles.passwordText}>Passwort vergessen?</Text>
-        </SafeAreaView>
+        <Button label='Anmelden'></Button>
       </SafeAreaView>
+
+      <Text style={styles.passwordText}>Passwort vergessen?</Text>
       
     </SafeAreaProvider>
   )
 }
 
-export default Login
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexWrap: "wrap",
-        backgroundColor: "#2A2D34",
-        padding: 20,
-      },
-      descriptionArea: {
-        flex: 1/3,
-        justifyContent: "center",
-        alignItems: "center",
-        borderTopWidth: 2,
-        borderTopColor: "#FFFFFF",
-        borderBottomWidth: 2,
-        borderBottomColor: "#FFFFFF"
-      },
-      loginArea: {
-        flex: 1/2,
-        alignItems: "center",
-        justifyContent: "center",
-      },
-      buttonArea: {
-        flex: 1/4,
-        top: 20
-      },
-      passwordText: {
-        textAlign: "center",
-        color: "#FFFFFF",
-        top: 7.5
-      }
-  });
+  container: {
+    flex: 1,
+    backgroundColor: "#2A2D34",
+    padding: 20,
+  },
+  descriptionArea: {
+    flex: 1/3,
+    justifyContent: "center",
+    alignItems: "center",
+    borderTopWidth: 2,
+    borderTopColor: "#FFFFFF",
+    borderBottomWidth: 2,
+    borderBottomColor: "#FFFFFF"
+  },
+  loginArea: {
+    flex: 1/2,
+    alignItems: "center",
+    justifyContent: "space-evenly"
+  },
+  passwordText: {
+    textAlign: "center",
+    color: "#FFFFFF",
+    bottom: 50
+  }
+});
+
+  export default Login
