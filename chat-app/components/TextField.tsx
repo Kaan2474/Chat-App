@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   labelText: {
-    marginBottom: 1.5,
+    marginBottom: 2,
     color: "#FFFFFF",
   },
   input: {

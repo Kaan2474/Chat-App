@@ -43,8 +43,9 @@ const styles = StyleSheet.create({
         padding: 20,
       },
       descriptionArea: {
-        flex: 1/4,
+        flex: 1/3,
         justifyContent: "center",
+        alignItems: "center",
         borderTopWidth: 2,
         borderTopColor: "#FFFFFF",
         borderBottomWidth: 2,

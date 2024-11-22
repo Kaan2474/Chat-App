@@ -13,6 +13,7 @@ const logo = require('@/assets/images/logo_4.png');
 const AddFriends = () => {
   return (
     <SafeAreaProvider style={styles.container}>
+      
       <ImageViewer imgSource={logo} theme='logo'/>
       <SafeAreaView style={styles.descriptionArea}>
         <DescriptionText text='Finden Sie Ihre Freunde und fügen Sie sie zu

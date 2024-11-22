@@ -1,5 +1,4 @@
 import { StyleSheet, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 
 
@@ -8,6 +7,7 @@ type Props = {
   heading?: string;
   headingNecessary: boolean;
 };
+
 
 export default function DescriptionText({ text, heading, headingNecessary }: Props) {
   if (headingNecessary === true) {
@@ -25,6 +25,7 @@ export default function DescriptionText({ text, heading, headingNecessary }: Pro
     </>
     );
 }
+
 
 const styles = StyleSheet.create({
   headingText: {

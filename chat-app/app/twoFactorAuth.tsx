@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
       borderBottomColor: "#FFFFFF",
     },
     inputArea: {
-      flex: 1/3,
+      flex: 1/2,
       marginTop: 50,
       justifyContent: "space-evenly",
       alignItems: "center"

@@ -53,10 +53,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonContainer: {
-    marginTop: 35
+    marginTop: 10
   },
   textfieldContainer: {
-    marginTop: 15,
+    marginTop: 5,
     alignItems: "center",
   },
   loginText: {
