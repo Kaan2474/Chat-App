@@ -10,7 +10,7 @@ import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 const logo = require('@/assets/images/logo_4.png');
 
 
-const AddFriends = () => {
+const AddFriend = () => {
   return (
     <SafeAreaProvider style={styles.container}>
       
@@ -52,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddFriends
+export default AddFriend
