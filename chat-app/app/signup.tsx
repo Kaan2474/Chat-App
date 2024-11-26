@@ -9,12 +9,11 @@ import TextField from '@/components/TextField';
 const PlaceholderImage = require('@/assets/images/default_user.jpg');
 
 
-export default function Index() {
+export default function SignUp() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={["top", "bottom", "left", "right"]}>
         <ScrollView>
-
           <SafeAreaView style={styles.imageContainer}>
             <ImageViewer imgSource={PlaceholderImage} />
             <View style={styles.buttonContainer}>
@@ -37,6 +36,7 @@ export default function Index() {
               <Text style={styles.loginText}>Du hast bereits ein Konto? Anmelden</Text>
             </View>
           </SafeAreaView>
+
         </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>

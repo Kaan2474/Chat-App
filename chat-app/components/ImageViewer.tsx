@@ -13,6 +13,10 @@ export default function ImageViewer({ imgSource, theme }: Props) {
     return <Image source={imgSource} style={styles.logo} />;
   }
 
+  if (theme === "chats") {
+    return <Image source={imgSource} style={styles.chatPicture} />;
+  }
+
   return <Image source={imgSource} style={styles.profilPicture} />;
 }
 
@@ -22,6 +26,13 @@ const styles = StyleSheet.create({
     width: 200,
     height: 80,
     alignSelf: "center"
+  },
+  chatPicture: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+    bottom: 45,
+    left: 7.5,
   },
   profilPicture: {
     width: 100,
