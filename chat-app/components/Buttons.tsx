@@ -5,14 +5,15 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 type Props = {
   label: string;
   theme?: string;
+  onPress?: () => void;
 };
 
 
-export default function Button({ label, theme }: Props) {
+export default function Button({ label, theme, onPress }: Props) {
   if (theme === "image") {
     return (
       <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
+        <Pressable style={styles.button} onPress={onPress}>
           <FontAwesome name="picture-o" size={18} color="#000000" style={styles.buttonIcon} />
           <Text style={styles.buttonLabel}>{label}</Text>
         </Pressable>

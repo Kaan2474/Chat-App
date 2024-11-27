@@ -5,10 +5,11 @@ import { Image, type ImageSource } from "expo-image";
 type Props = {
   imgSource: ImageSource;
   theme?: string;
+  selectedImage?: string;
 };
 
 
-export default function ImageViewer({ imgSource, theme }: Props) {
+export default function ImageViewer({ imgSource, theme, selectedImage }: Props) {
   if (theme === "logo") {
     return <Image source={imgSource} style={styles.logo} />;
   }
@@ -17,7 +18,8 @@ export default function ImageViewer({ imgSource, theme }: Props) {
     return <Image source={imgSource} style={styles.chatPicture} />;
   }
 
-  return <Image source={imgSource} style={styles.profilPicture} />;
+  const imageSource = selectedImage ? { uri: selectedImage } : imgSource;
+  return <Image source={imageSource} style={styles.profilPicture} />;
 }
 
 

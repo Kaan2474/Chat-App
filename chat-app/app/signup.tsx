@@ -1,23 +1,40 @@
 import { Text, StyleSheet, ScrollView, View } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import React from 'react';
+import TextField from '@/components/TextField';
+import * as ImagePicker from 'expo-image-picker';
+import { useState } from 'react';
+
 import Button from '@/components/Buttons';
 import ImageViewer from '@/components/ImageViewer';
-import TextField from '@/components/TextField';
 
 
 const PlaceholderImage = require('@/assets/images/default_user.jpg');
 
 
 export default function SignUp() {
+  const [selectedImage, setSelectedImage] = useState<string | undefined>(undefined);
+
+  const pickImageAsync = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      allowsEditing: true,
+      quality: 1,
+    });
+
+    if (!result.canceled) {
+      setSelectedImage(result.assets[0].uri);
+    }
+  };
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container} edges={["top", "bottom", "left", "right"]}>
         <ScrollView>
           <SafeAreaView style={styles.imageContainer}>
-            <ImageViewer imgSource={PlaceholderImage} />
+            <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage}/>
             <View style={styles.buttonContainer}>
-              <Button label='Foto hinzufügen' theme='image'></Button>
+              <Button label='Foto hinzufügen' theme='image' onPress={pickImageAsync}></Button>
             </View>
           </SafeAreaView>
       
