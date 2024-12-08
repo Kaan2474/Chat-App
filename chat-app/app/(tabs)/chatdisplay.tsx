@@ -67,7 +67,8 @@ const ChatDisplay = () => {
         <FlatList
           data={DATA}
           renderItem={({item}) => <Item time={item.time} name={item.name}
-          message={item.message} picture={item.picture} unreadMessages={item.unreadMessages}/>}
+          message={item.message} picture={item.picture}
+          unreadMessages={item.unreadMessages}/>}
           keyExtractor={item => item.id}
       />
       </SafeAreaView>

@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 200,
     height: 80,
-    alignSelf: "center"
+    alignSelf: "center",
   },
   chatPicture: {
     width: 60,
