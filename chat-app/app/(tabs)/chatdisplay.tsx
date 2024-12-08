@@ -70,6 +70,16 @@ const ChatDisplay = () => {
           message={item.message} picture={item.picture}
           unreadMessages={item.unreadMessages}/>}
           keyExtractor={item => item.id}
+          ListHeaderComponent={
+          <>
+            <ImageViewer imgSource={logo} theme='logo' />
+            <SafeAreaView style={{backgroundColor: "red"}}>
+            <DescriptionText text='Hier sind all Ihre Chats! Wählen Sie ein Gespräch,
+            um direkt weiterzuschreiben, neue Nachrichten zu lesen oder starten Sie
+            einen neuen Chat, um in Kontakt zu bleiben.' headingNecessary={false} />
+            </SafeAreaView>
+          </>
+        }
       />
       </SafeAreaView>
     </SafeAreaProvider>
